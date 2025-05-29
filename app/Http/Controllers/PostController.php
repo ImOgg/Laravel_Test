@@ -57,7 +57,8 @@ class PostController extends Controller
     {
         $posts = Post::all();
 
-        return $this->successResponse($posts, '成功獲取所有文章');
+        // return $this->successResponse($posts, '成功獲取所有文章');
+        return view('posts', ['posts' => $posts]);
     }
     public function show($id)
     {
