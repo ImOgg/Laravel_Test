@@ -145,3 +145,10 @@ public function show($id)
     $post = Post::findOrFail($id);
     return $this->successResponse($post);
 }
+
+建立和使用 FormRequest 的步驟
+FormRequest 類應該放在 app/Http/Requests 目錄下。以下是完整步驟：
+
+1. 建立 FormRequest 類
+使用 Artisan 命令建立 FormRequest（推薦方式）：
+php artisan make:request PostRequest
